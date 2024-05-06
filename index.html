@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      /* *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      } */
+      nav {
+        /* border: 1px solid gray; */
+        display: flex;
+        justify-content: space-around;
+        /* height: 50px; */
+        /* position: sticky;
+        top: 0px; */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+      .contant_div{
+        width: 60%;
+        /* border: 1px solid rgb(144, 189, 21); */
+      }
+      .contant_div ul {
+        
+        width: 900px;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        border-radius: 8px;
+      }
+      .contant_div ul li {
+        padding: 10px;
+        font-size:large;
+        transition: all 2s ease-in-out;
+      }
+      .contant_div ul li:hover {
+        cursor: pointer;
+        /* color: red; */
+        background-color: lightseagreen;
+        padding: 10px;
+        font-size:large;
+        border-radius: 10px;
+      }
+      .img_div_first{
+        /* border: 1px solid salmon; */
+        width: 20%;
+      }
+      .img_div_first img {
+        height: 60px;
+        width: 140px;
+       
+        padding: 10px;
+        transition: all 2s ease-in-out;
+      }
+      .img_div_first img:hover {
+        cursor: pointer;
+        /* background-color: lightseagreen; */
+        transform: scale(1.05);
+      }
+      .menu_div {
+        width: 15%;
+        /* border: 1px solid rgb(144, 50, 50); */
+        font-size: x-large;
+        padding: 15px;
+        display: none;
+      }
+      /* .search_div{
+        display: none;
+      } */
+      .first_container {
+        width: 90%;
+        margin: auto;
+        /* border: 1px solid; */
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .heading_div {
+        /* border: 1px solid; */
+        display: flex;
+        align-items: center;
+      }
+      .flex_div {
+        /* border:  1px solid; */
+        line-height: 10px;
+      }
+      .flex_div button {
+        background-color: green;
+        color: white;
+        border: none;
+        height: 39px;
+        width: 150px;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+      }
+      .flex_div button:hover {
+        cursor: pointer;
+        /* background-color: lightseagreen; */
+        transform: scale(1.05);
+      }
+      .six_div {
+        /* border: 1px solid red; */
+        width: 30%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+      }
+      .six_div div {
+        /* border: 1px solid salmon; */
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        transition: all 1s ease-in-out;
+      }
+      .six_div div:hover {
+        background-color: lightseagreen;
+        transform: scale(1.05);
+      }
+      .six_div img {
+        width: 40px;
+        height: 40px;
+      }
+      h2 {
+        text-align: center;
+      }
+      .second_container {
+        width: 90%;
+        margin: auto;
+        /* border: 1px solid; */
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .second_container div {
+        /* border: 1px solid red; */
+        text-align: center;
+        padding: 10px;
+      }
+      .second_container div img {
+        height: 400px;
+        width: 550px;
+        border-radius: 25px;
+        transition: all 1s ease-in-out;
+      }
+      .second_container div img:hover {
+        cursor: pointer;
+        /* background-color: lightseagreen; */
+        transform: scale(1.05);
+      }
+      .second_container div h1 {
+        font-weight: bold;
+      }
+      .third_container {
+        width: 88%;
+        margin: auto;
+        /* border: 1px solid; */
+        text-align: center;
+        background-color: rgb(227, 249, 242);
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .third_container p {
+        margin-top: -20px;
+        font-weight: bold;
+      }
+      .six_sip_div {
+        /* border: 1px solid salmon; */
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .six_sip_div div img {
+        width: 10%;
+        height: 40px;
+        transition: all 0.5s ease-in-out;
+      }
+      .six_sip_div div img:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+      .third_container button {
+        background-color: rgb(107, 117, 112);
+        padding: 10px 20px;
+        border: none;
+        margin: 10px 0px 50px 0px;
+        border-radius: 10px;
+        color: white;
+      }
+      .fourth_container {
+        /* border: 1px solid; */
+        background-color: rgb(20, 208, 145);
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 0px 0px 0px;
+        border-radius: 15px;
+        width: 89%;
+        margin: 40px auto;
+      }
+      .last_div {
+        /* border:  1px solid salmon; */
+        display: grid;
+        place-items: center;
+      }
+      .last_div h1,
+      .last_div p {
+        color: white;
+        /* font-size: x-large; */
+      }
+      .last_div button {
+        background-color: white;
+        color: rgb(20, 208, 145);
+        border: none;
+        font-size: xx-large;
+        font-weight: 500;
+        padding: 20px 60px 20px 60px;
+        border-radius: 5px;
+      }
+      .h1_p_div {
+        /* border: 1px solid; */
+      }
+      .last_div h1 {
+        font-size: xx-large;
+      }
+
+      /* <-----------For Mobile Screen-----------> */
+
+      @media screen and (min-width: 200px) and (max-width: 400px) {
+        .contant_div ul {
+          display: none;
+        }
+
+        .menu_div {
+          display: block;
+          color: rgb(21, 21, 21);
+      
+        }
+        .first_container {
+        width: 90%;
+        display: block;
+        text-align: center;
+      }
+      .heading_div {
+        margin: auto;
+        width: 100%;
+      }
+      .flex_div {
+        width: 100%;
+       padding: 30px;
+      }
+      .flex_div button {
+        background-color: green;
+        color: white;
+        border: none;
+        height: 39px;
+        width: 150px;
+        border-radius: 5px;
+      }
+      .six_div {
+        display: block;
+        border: 1px solid red;
+        width: 100%;
+        height: 70%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+      .six_div div {
+        width: 90%;
+        height: 70%;
+        border: 1px solid salmon;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+      .six_div img {
+        width: 40px;
+        height: 40px;
+      }
+      h2 {
+        text-align: center;
+      }
+        }
+      
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="img_div_first"><img src="./images/DHAN IMAGE.png" alt="" /></div>
+      <div class="contant_div">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="menu_div"><span>&#9776;</span></div>
+    </nav>
+    <div class="first_container">
+      <div class="heading_div">
+        <div class="flex_div">
+          <h1>Invest In IPOs</h1>
+          <p>Trusted by milloins of Indians.Start Investing Today</p>
+          <button>GET STARTED</button>
+        </div>
+      </div>
+
+      <div class="six_div">
+        <div>
+          <img src="./images/Matual Funds.png" alt="" />
+          <h4>Matual Funds</h4>
+        </div>
+        <div>
+          <img src="./images/stocks.png" alt="" />
+          <h4>Stocks</h4>
+        </div>
+        <div>
+          <img src="./images/future and option.png" alt="" />
+          <h4>Future & Option</h4>
+        </div>
+        <div>
+          <img src="./images/us stocks.png" alt="" />
+          <h4>Us stocks</h4>
+        </div>
+        <div>
+          <img src="./images/ipo.png" alt="" />
+          <h4>IPOs</h4>
+        </div>
+        <div>
+          <img src="./images/fix depoiset.png" alt="" />
+          <h4>Fixed Deposit</h4>
+        </div>
+      </div>
+    </div>
+    <h2>Keep learning.Keep growing.</h2>
+    <div class="second_container">
+      <div>
+        <img src="./images/Share market.jpg" alt="" />
+        <h1>How to select/Pick stocks for Inrarday</h1>
+      </div>
+      <div>
+        <img src="./images/bull.webp" alt="" />
+        <h1>Begainers guide to Matual funds</h1>
+      </div>
+      <div>
+        <img src="./images/market.jpg" alt="" />
+        <h1>How to Diversify in the time of Market<br />Volatility</h1>
+      </div>
+    </div>
+    <div class="third_container">
+      <h1>Discover Matual Funds</h1>
+      <p>Search Matual Funds,AMCs etc.</p>
+      <div class="six_sip_div">
+        <div>
+          <img src="./images/high.png" alt="" />
+          <h3>High Returns</h3>
+        </div>
+        <div>
+          <img src="./images/sip with 500.jpeg" alt="" />
+          <h3>SIP With 500</h3>
+        </div>
+        <div>
+          <img src="./images/tax saving.jpg" alt="" />
+          <h3>Tax savings</h3>
+        </div>
+        <div>
+          <img src="./images/large cap.avif" alt="" />
+          <h3>Large Cap</h3>
+        </div>
+        <div>
+          <img src="./images/mid cap.jpg" alt="" />
+          <h3>Mid cap</h3>
+        </div>
+        <div>
+          <img src="./images/small cap.png" alt="" />
+          <h3>Small Cap</h3>
+        </div>
+      </div>
+      <button>Explore All Matual Funds</button>
+    </div>
+    <div class="fourth_container">
+      <div class="last_div">
+        <div class="h1_p_div">
+          <h1>We Are with You At Every Step</h1>
+          <p>
+            For Any Enqury You Have,Find The Answer Quickly On Our Support.Need
+            A Littlt Bit More Help? <br />We're Happy talkVia Call Or Chat
+          </p>
+          <button>Get In Touch</button>
+        </div>
+      </div>
+      <div class="lastimage_div">
+        <img src="./images/last dhan.png" alt="" />
+      </div>
+    </div>
+    <div class="footer_container">
+      <footer></footer>
+    </div>
+  </body>
+</html>
